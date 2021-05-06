@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* //dark blue: #0d335d
+//light blue: ##70b8f3;
+seagreen */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+
+  font-family: 'Inconsolata', monospace;
+  overflow-x: hidden;
+}
+
+/* navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #70b8f3;
+  font-weight: bold;
+  border-bottom: 5px solid #0d335d;
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  top: 10;
+  opacity: 0.9;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 10px 10px;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+  font-size: 20px;
+  transition: transform 0.2s ease-in;
+
+  border: 4px solid #fff;
+  margin: 5px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #0d335d;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  color: #070707;
+  font-weight: bold;
+  transform: scale(1.1);
+  animation: transform 0.4s ease-out;
+}
+
+/* TOGGLE BUTTON STYLES */
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.logo-small {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: 3px dotted orange;
+}
+
+.bitcoin-key {
+  width: 80px;
+  height: 80px;
+  color: green;
+}
+
+/* header styles */
+
+#header {
+  margin-top: 150px;
+}
+
+.header-text {
+  animation: slideFromLeft 0.8s ease-out;
+  z-index: 3;
+}
+
+.header-image {
+  animation: slideFromRight 0.8s ease-out;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-13px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* .header-container a {
+  text-decoration: none;
+  color: #0d335d;
+  font-weight: bold;
+}
+
+.header-container a:hover {
+  color: #fff;
+} */
+
+.paw {
+  opacity: 0.1;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 4;
+}
+
+.paw:nth-child(1) {
+  left: 80%;
+  transform: rotate(-10deg);
+}
+
+.paw:nth-child(2) {
+  left: 10%;
+  transform: rotate(20deg);
+}
+
+.paw:nth-child(3) {
+  left: 38%;
+  top: 60%;
+  transform: rotate(1300deg);
+}
+
+.paw:nth-child(4) {
+  left: 5%;
+  top: 70%;
+  transform: rotate(120deg);
+}
+
+.paw:nth-child(5) {
+  left: 50%;
+  top: 0%;
+  transform: rotate(-50deg);
+  z-index: 6;
+}
+
+.paw:nth-child(6) {
+  left: 79%;
+  top: 60%;
+  transform: rotate(90deg);
+}
+.container {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 50px auto;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+}
+
+.logo-large {
+  width: 600px;
+  height: 600px;
+}
+
+.header-text h2 {
+  font-size: 30px;
+  line-height: 3rem;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+}
+
+#header-button {
+  border: 5px dashed #70b8f3;
+  font-size: 40px;
+  font-family: 'Inconsolata', monospace;
+  background-color: #fff;
+  cursor: pointer;
+  color: #0d335d;
+  padding: 30px;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 16px 20px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 16px 20px -1px rgba(0, 0, 0, 0.2);
+}
+
+#header-button:active {
+  color: black;
+  transform: scale(0.96);
+  -webkit-box-shadow: 0px 6px 9px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 0px 6px 9px 1px rgba(0, 0, 0, 0.47);
+}
+
+#header-button:hover {
+  background-color: seagreen;
+  color: #fff;
+}
+
+span#bangkaew {
+  color: seagreen;
+  font-size: 40px;
+  letter-spacing: 1.3rem;
+  font-weight: 900;
+}
+
+/* headdog animated */
+#head-dog-small {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 120px;
+}
+
+/* Tokenomics section */
+.tokemonics {
+  background-color: rgba(84, 157, 230, 0.748);
+  margin-top: 250px;
+}
+
+.container-tokemonics {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.tokemonics-image {
+  width: 400px;
+  animation: slideFromRight2 1.5s ease-out;
+}
+
+.tokemonics-text {
+  animation: slideFromLeft2 1.5s ease-out;
+}
+
+@keyframes slideFromLeft2 {
+  0% {
+    transform: translateX(-1200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight2 {
+  0% {
+    transform: translateX(1200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container-tokemonics h2 {
+  color: rgb(255, 255, 255);
+  position: relative;
+  font-size: 50px;
+
+  letter-spacing: 1rem;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* buy Section */
+.buy-section {
+  position: relative;
+}
+
+.buy-container {
+  background-color: rgba(84, 157, 230, 0.248);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  max-width: 1400px;
+  border: 10px dashed seagreen;
+  min-height: 700px;
+  margin-top: 200px;
+}
+
+.buy-container::after {
+  content: '';
+  background: url('/img/crypto3.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buy-container h2 {
+  font-size: 100px;
+  color: navy;
+  letter-spacing: 1.5rem;
+  opacity: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buy-links {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-text {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.buy-text p {
+  padding: 40px;
+}
+
+.fa-telegram {
+  font-size: 100px;
+  color: navy;
+  cursor: pointer;
+  width: 100px;
+
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.dextools {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+#bitcoin-svg-1 {
+  height: 315px;
+  width: 315px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#flashy-bitcoin {
+  height: 315px;
+  width: 315px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* media queries */
+@media (max-width: 1100px) {
+  .paw {
+    display: none;
+  }
+  .header-text {
+    order: 2;
+  }
+}
+
+@media (max-width: 862px) {
+  .logo-large {
+    width: 550px;
+    height: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .logo-large {
+    width: 370px;
+    height: 370px;
+  }
+  .tokemonics-text h2 {
+    letter-spacing: initial;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-large {
+    width: 320px;
+    height: 320px;
+  }
+  h2 {
+    font-size: 25px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  #header {
+    max-width: 320px;
+  }
+  #header-text {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    padding: 0 20px;
+  }
+  span#bangkaew {
+    letter-spacing: 0.1rem;
+  }
+}
